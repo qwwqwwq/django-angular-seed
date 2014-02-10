@@ -1,12 +1,13 @@
 'use strict';
 
-var App = angular.module('App', [])
+var App = angular.module('App', ['d3Directives'])
   .config(['$routeProvider', '$locationProvider', function($routeProvider) {
     $routeProvider
       .otherwise({
         redirectTo: '/'
       });
   }]);
+
 
 App.directive('activeLink', ['$location', function(location) {
     return {
@@ -36,3 +37,7 @@ App.directive('waffleSwitch', function() {
         }
     };
 });
+
+
+angular.module('d3', []);
+angular.module('d3Directives', ['d3']);

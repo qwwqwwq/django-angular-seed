@@ -9,3 +9,13 @@ App.controller('Test',
 );
 
 }());
+
+App.config(['$routeProvider', function($routeProvider) {
+    $routeProvider
+      .when('/test', {
+        templateUrl: '/static/views/test.html',
+        controller: 'Test'
+      });
+}]);
+
+
