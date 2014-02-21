@@ -16,10 +16,6 @@
 
           // define render function
 			scope.render = function(data){
-				console.log(scope);
-				console.log(data);
-				console.log(element);
-				svg.selectAll("*").remove();
 				d3.select("svg").remove();
 
 				var mySvg = d3.select(element[0])
