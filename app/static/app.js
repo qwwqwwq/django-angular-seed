@@ -1,6 +1,6 @@
 'use strict';
 
-var App = angular.module('App', ['d3Directives'])
+var App = angular.module('App', ['d3Directives', 'chartService'])
   .config(['$routeProvider', '$locationProvider', function($routeProvider) {
     $routeProvider
       .otherwise({
