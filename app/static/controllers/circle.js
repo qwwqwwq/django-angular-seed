@@ -4,7 +4,6 @@
 App.controller('Circle', 
 	function($scope) {
 	    $scope.data = [{radius:10}];
-	    console.log($scope);
     }
 );
 

@@ -41,3 +41,4 @@ App.directive('waffleSwitch', function() {
 
 angular.module('d3', []);
 angular.module('d3Directives', ['d3']);
+angular.module('chartService', ['ngResource']);

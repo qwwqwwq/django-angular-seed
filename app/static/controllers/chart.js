@@ -3,8 +3,16 @@
 
 App.controller('ChartCtrl', ['$scope', 'Chart',  
 	function($scope, Chart) {
-	    $scope.data = [{radius:10}];
-	    console.log($scope);
+		$scope.medals = [0,0,0];
+		$scope.chartId = 1;
+		$scope.$watch('chartId', function() {
+			Chart.get({chartId:$scope.chartId}, function(data) {
+				$scope.medals[0] = data.gold_medals;
+				$scope.medals[1] = data.silver_medals;
+				$scope.medals[2] = data.bronze_medals;
+			  }
+			);
+		});
     }]
 );
 
