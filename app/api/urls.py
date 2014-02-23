@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, url, include
 from rest_framework.urlpatterns import format_suffix_patterns
 from app.api.user import UserList, UserDetail, GroupList, GroupDetail
-from app.api.charts import ChartDetail
+from app.api.charts import ChartDetail, ChartList
 
 urlpatterns = patterns('',
     url(r'^/users/?$', UserList.as_view(), name='user-list'),
@@ -9,6 +9,7 @@ urlpatterns = patterns('',
     url(r'^/groups/?$', GroupList.as_view(), name='group-list'),
     url(r'^/groups/(?P<pk>\d+)/?$', GroupDetail.as_view(), name='group-detail'),
     url(r'^/chart/(?P<pk>\d+)/?$', ChartDetail.as_view(), name='chart-detail'),
+    url(r'^/charts/?$', ChartList.as_view(), name='chart-list'),
 )
 
 # Format suffixes

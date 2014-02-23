@@ -1,8 +1,10 @@
 <p>
-Enter chart pk.
+Select country.
 </p>
 
 <div ng-controller="ChartCtrl">
-	<input type="text" ng-model="chartId"></input>
+	<select ng-model="chartId">
+		<option ng-repeat="chart in charts" value="{{chart.id}}">{{chart.country}}</option>
+	</select> 
     <d3-chart data="medals"></d3-chart>
 </div>
